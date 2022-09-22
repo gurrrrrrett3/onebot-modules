@@ -1,0 +1,11 @@
+{
+    "name": "Moderation",
+    "description": "A module to handle all your moderation needs",
+    "version": "1.0.0",
+
+    "intents": [
+        "Guilds",
+        "GuildMessages",
+        "GuildBans"
+    ]
+}

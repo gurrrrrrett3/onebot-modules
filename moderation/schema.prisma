@@ -1,0 +1,26 @@
+generator client {
+  provider = "prisma-client-js"
+}
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+//
+//  PRISMA SCHEMA
+//
+//  This will be read and parsed by Onebot. 
+//
+
+
+// It's reccomended to start each model with your module name to avoid conflicts
+
+model Ban {
+  id        Int      @id @default(autoincrement())
+  user      String
+  guild     String
+  reason    String
+  moderator String
+  date      DateTime @default(now())
+  expiresAt DateTime  
+}
